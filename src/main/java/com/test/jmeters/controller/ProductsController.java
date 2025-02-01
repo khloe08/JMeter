@@ -15,8 +15,15 @@ public class ProductsController {
     private ProductsService productsService;
 
     @GetMapping("/product")
-    public Page<Products> getElectronicsWithPagination() {
+    public Page<Products> getProductsList() {
 
-        return productsService.getElectronicsWithPagination();
+        return productsService.getProductsList();
     }
+
+    @GetMapping("/product_tune")
+    public Page<Products> getProductsTuneList() {
+
+        return productsService.getProductsTuneList();
+    }
+
 }
